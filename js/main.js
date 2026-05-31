@@ -78,55 +78,6 @@
   );
   counters.forEach(function (el) { counterObserver.observe(el); });
 
-  // FAQ Accordion
-  document.querySelectorAll('.accordion-item').forEach(function (item) {
-    const trigger = item.querySelector('.accordion-trigger');
-    trigger.addEventListener('click', function () {
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.accordion-item').forEach(function (i) {
-        i.classList.remove('open');
-      });
-      if (!isOpen) item.classList.add('open');
-    });
-  });
-
-  // Testimonials slider
-  const slides = document.querySelectorAll('.testimonial-slide');
-  const dots = document.querySelectorAll('.dot');
-  let currentSlide = 0;
-  let slideInterval;
-
-  function showSlide(index) {
-    currentSlide = (index + slides.length) % slides.length;
-    slides.forEach(function (s, i) {
-      s.classList.toggle('active', i === currentSlide);
-    });
-    dots.forEach(function (d, i) {
-      d.classList.toggle('active', i === currentSlide);
-    });
-  }
-
-  document.getElementById('prev-slide').addEventListener('click', function () {
-    showSlide(currentSlide - 1);
-    resetInterval();
-  });
-  document.getElementById('next-slide').addEventListener('click', function () {
-    showSlide(currentSlide + 1);
-    resetInterval();
-  });
-  dots.forEach(function (dot, i) {
-    dot.addEventListener('click', function () {
-      showSlide(i);
-      resetInterval();
-    });
-  });
-
-  function resetInterval() {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(function () { showSlide(currentSlide + 1); }, 6000);
-  }
-  slideInterval = setInterval(function () { showSlide(currentSlide + 1); }, 6000);
-
   // Contact form
   const form = document.getElementById('contact-form');
   const formWrap = document.getElementById('contact-form-wrap');

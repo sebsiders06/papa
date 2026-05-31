@@ -5,9 +5,9 @@ Site internet one page professionnel en **HTML, CSS et JavaScript** pur.
 ## Structure
 
 ```
-├── index.html      # Page principale (10 sections)
+├── index.html      # Page principale (8 sections)
 ├── css/styles.css  # Styles et design premium
-├── js/main.js      # Interactions (menu, slider, FAQ, formulaire)
+├── js/main.js      # Interactions (menu, compteurs, formulaire)
 ├── robots.txt
 └── sitemap.xml
 ```
@@ -28,10 +28,8 @@ npx serve .
 4. Méthodologie — Timeline 5 étapes
 5. Bénéfices — Résultats + statistiques
 6. À propos — Présentation consultant
-7. Témoignages — Slider clients
-8. FAQ — Accordéon interactif
-9. CTA final
-10. Contact — Formulaire validé
+7. CTA final
+8. Contact — Formulaire validé
 
 ## Personnalisation
 
@@ -41,4 +39,4 @@ npx serve .
 
 ## SEO
 
-Meta title, description, Open Graph, Schema.org (ProfessionalService + FAQPage), sitemap et robots.txt inclus.
+Meta title, description, Open Graph, Schema.org (ProfessionalService), sitemap et robots.txt inclus.

@@ -1,72 +1,44 @@
-# Osmose Conseils et services — Site One Page Premium
+# Osmose Conseils et services — Site One Page HTML
 
-Site internet one page professionnel pour cabinet d'audit, management et organisation d'entreprise.
-
-## Stack technique
-
-- **Next.js 15** — App Router, SSR, SEO optimisé
-- **TypeScript** — Typage strict
-- **Tailwind CSS** — Design system premium
-- **Shadcn/UI** — Composants accessibles
-- **Framer Motion** — Animations fluides
-- **Lucide Icons** — Iconographie moderne
-
-## Démarrage
-
-```bash
-npm install
-npm run dev
-```
-
-Ouvrir [http://localhost:3000](http://localhost:3000).
+Site internet one page professionnel en **HTML, CSS et JavaScript** pur.
 
 ## Structure
 
 ```
-src/
-├── app/                  # Pages, layout, SEO (sitemap, robots)
-├── components/
-│   ├── layout/           # Header, Footer
-│   ├── sections/         # 10 sections one-page
-│   └── ui/               # Composants Shadcn/UI
-└── lib/                  # Utilitaires, config SEO
+├── index.html      # Page principale (10 sections)
+├── css/styles.css  # Styles et design premium
+├── js/main.js      # Interactions (menu, slider, FAQ, formulaire)
+├── robots.txt
+└── sitemap.xml
+```
+
+## Utilisation
+
+Ouvrez directement `index.html` dans votre navigateur, ou servez le dossier avec un serveur local :
+
+```bash
+npx serve .
 ```
 
 ## Sections
 
-1. Hero — Accroche + chiffres clés + CTA
-2. Problématiques — Pain points des dirigeants
+1. Hero — Accroche, chiffres animés, CTA
+2. Problématiques — Pain points dirigeants
 3. Services — 4 offres premium
 4. Méthodologie — Timeline 5 étapes
-5. Bénéfices — Résultats + statistiques animées
-6. À propos — Storytelling consultant
+5. Bénéfices — Résultats + statistiques
+6. À propos — Présentation consultant
 7. Témoignages — Slider clients
 8. FAQ — Accordéon interactif
-9. CTA final — Appel à l'action
-10. Contact — Formulaire avec validation CRM-ready
+9. CTA final
+10. Contact — Formulaire validé
 
 ## Personnalisation
 
-- **Nom du cabinet** : `src/lib/seo.ts` → `siteConfig`
-- **Couleurs** : `tailwind.config.ts`
-- **Contenu** : fichiers dans `src/components/sections/`
-- **CRM** : `src/app/api/contact/route.ts`
+- **Contenu & coordonnées** : `index.html`
+- **Styles & couleurs** : `css/styles.css`
+- **Interactions** : `js/main.js`
 
 ## SEO
 
-- Meta title, description, Open Graph
-- Schema.org (ProfessionalService + FAQPage)
-- Sitemap automatique (`/sitemap.xml`)
-- Robots.txt (`/robots.txt`)
-- Mots-clés ciblés intégrés dans le contenu
-
-## Build production
-
-```bash
-npm run build
-npm start
-```
-
-## Déploiement
-
-Compatible Vercel, Netlify, ou tout hébergeur Node.js.
+Meta title, description, Open Graph, Schema.org (ProfessionalService + FAQPage), sitemap et robots.txt inclus.
